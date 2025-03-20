@@ -36,7 +36,7 @@ export const getDashboardMetrics = async (req: Request, res:Response):Promise<vo
                 date: "desc"
             }
         });
-        const expenseByCategorySummary = expenseByCategoryRaw.map((item) => (
+        const expenseByCategorySummary = expenseByCategoryRaw.map((item:any) => (
             {
                 ...item,
                 amount: item.amount.toString()
