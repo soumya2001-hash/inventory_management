@@ -10,7 +10,7 @@ export const getExpensesByCategory = async (req: Request, res:Response): Promise
                 date: "desc",
             },
         });
-        const expenseByCategorySummary = expenseByCategoryRaw.map((item:any) => (
+        const expenseByCategorySummary = expenseByCategoryRaw.map((item) => (
             {
                 ...item,
                 amount: item.amount.toString()
