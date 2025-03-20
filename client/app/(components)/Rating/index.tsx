@@ -1,0 +1,14 @@
+import { Star } from 'lucide-react';
+import React from 'react'
+
+type RatingProps = {
+    rating:number;
+}
+
+const Rating = ({rating}: RatingProps) => {
+  return [1,2,3,4,5].map((index) => (
+    <Star key={index} fill={index <= rating ? "#ffc107" : "#bec1cb"} strokeWidth={0} className='w-4 h-4'/>
+  ))
+}
+
+export default Rating;
