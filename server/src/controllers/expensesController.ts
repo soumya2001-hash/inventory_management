@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, ExpenseByCategory } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -10,10 +10,10 @@ export const getExpensesByCategory = async (req: Request, res:Response): Promise
                 date: "desc",
             },
         });
-        const expenseByCategorySummary = expenseByCategoryRaw.map((item) => (
+        const expenseByCategorySummary = expenseByCategoryRaw.map((item: ExpenseByCategory) => (
             {
                 ...item,
-                amount: item.amount.toString()
+                amount: String(item.amount)
             }
         ));
         res.status(200).json(expenseByCategorySummary);
