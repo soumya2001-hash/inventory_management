@@ -5,7 +5,7 @@ import { useMemo, useState } from "react"
 import Header from "../(components)/Header";
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 
-const expenses = () => {
+const Expenses = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [startDate, setStartDate] = useState("");
@@ -160,4 +160,4 @@ const expenses = () => {
   )
 }
 
-export default expenses
+export default Expenses

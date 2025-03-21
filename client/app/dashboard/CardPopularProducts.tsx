@@ -4,7 +4,7 @@ import React from 'react'
 import Rating from '../(components)/Rating';
 
 const CardPopularProducts = () => {
-    const {data:dashboardMetrics, isLoading, error} = useGetDashboardMetricsQuery();
+    const {data:dashboardMetrics, isLoading} = useGetDashboardMetricsQuery();
     return <div className="row-span-3 lg:row-span-6 bg-white shadow-md rounded-2xl pb-16 ">
         {isLoading ? (
             <div className='m-5'>Loading...</div>

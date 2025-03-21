@@ -18,7 +18,7 @@ const mockSettings: UserSetting[] = [
 ];
 
 
-const settings = () => {
+const Settings = () => {
 
     const [userSettings, setUserSettings] = useState<UserSetting[]>(mockSettings);
 
@@ -77,4 +77,4 @@ const settings = () => {
   )
 }
 
-export default settings
+export default Settings
