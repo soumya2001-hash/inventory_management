@@ -10,7 +10,7 @@ export const getExpensesByCategory = async (req: Request, res:Response): Promise
                 date: "desc",
             },
         });
-        const expenseByCategorySummary = expenseByCategoryRaw.map((item: Prisma.ExpenseByCategoryGetPayload<{}>) => (
+        const expenseByCategorySummary = expenseByCategoryRaw.map((item: Prisma.ExpenseByCategoryGetPayload<{ select: { amount: true; category: true } }>) => (
             {
                 ...item,
                 amount: String(item.amount)
