@@ -58,8 +58,8 @@ const Sidebar = () => {
           <Image
                 src="/assets/logo.png"
                 alt='Logo'
-                width={27}
-                height={27}
+                width={30}
+                height={30}
                 className='rounded w-8'
               />
             <h1 className={`${isSidebarCollapsed ? 'hidden' : 'block'} font-extrabold text-2xl`}>EStock</h1>
