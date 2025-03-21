@@ -2,6 +2,7 @@
 import { useAppSelector } from '@/app/redux'
 import { setIsSidebarCollapsed } from '@/State';
 import { Archive, CircleDollarSign, Clipboard, Layout, LucideIcon, Menu, SlidersHorizontal, User } from 'lucide-react'
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -54,7 +55,13 @@ const Sidebar = () => {
     <div className={sidebarClassNames}>
       {/* Top Logo */}
         <div className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${isSidebarCollapsed ? 'px-5' : 'px-8'}`}>
-            <div>logo</div>
+          <Image
+                src="/assets/logo.png"
+                alt='Logo'
+                width={27}
+                height={27}
+                className='rounded w-8'
+              />
             <h1 className={`${isSidebarCollapsed ? 'hidden' : 'block'} font-extrabold text-2xl`}>EStock</h1>
             <button className='md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100' onClick={toggleSidebar}> 
               <Menu className='w-4 h-4'/>
